@@ -54,7 +54,7 @@ def pregunta_02():
     )
 
     # Cree un clasificador con siete vecinos
-    knn = KNeighborsClassifier(n_neighbors=5)
+    knn = KNeighborsClassifier(n_neighbors=10)
 
     # Entrene el clasificador
     knn.fit(X_train, y_train)
@@ -75,7 +75,7 @@ def pregunta_03():
     from sklearn.model_selection import train_test_split
 
     # Cargue el dataset digits
-    digits = ____.____()
+    digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
     X = digits.images.reshape((len(digits.images), -1))
