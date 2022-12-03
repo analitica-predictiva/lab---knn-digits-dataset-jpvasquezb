@@ -20,13 +20,13 @@ def pregunta_01():
     digits = datasets.load_digits()
 
     # Imprima los nombres de la variable target del dataset
-    #print(digits.target)
+    print(digits.target)
 
     # Imprima las dimensinoes de matriz de datos
-    #print(digits.images.shape)
+    print((digits.images.reshape((len(digits.images), -1)).shape))
 
     # Imprima las dimensiones del vector de salida
-    #print(digits.target.shape)
+    print(digits.target.shape)
 
 
 def pregunta_02():
@@ -43,7 +43,7 @@ def pregunta_02():
     digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
-    X = digits.images.reshape((len(digits.images), -1))
+    X = digits.images(digits.images)
     y = digits.target
 
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
