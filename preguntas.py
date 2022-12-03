@@ -43,7 +43,7 @@ def pregunta_02():
     digits = datasets.load_digits()
 
     # Cree los vectors de características y de salida
-    X = digits.images(digits.images)
+    X = digits.images.reshape((len(digits.images), -1))
     y = digits.target
 
     # Divida los datos de entrenamiento y prueba. Los conjuntos de datos están
@@ -54,7 +54,7 @@ def pregunta_02():
     )
 
     # Cree un clasificador con siete vecinos
-    knn = KNeighborsClassifier(n_neighbors=7)
+    knn = KNeighborsClassifier(n_neighbors=5)
 
     # Entrene el clasificador
     knn.fit(X_train, y_train)
